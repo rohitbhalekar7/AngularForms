@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { Routes, RouterModule } from '@angular/router';
 import { PersonalComponent } from '../personal/personal.component';
 import { OfficialComponent } from '../official/official.component';
-import { Routes, RouterModule } from '@angular/router';
+
 import { EmployeeListComponent } from '../employee-list/employee-list.component';
 
 const paths: Routes = [
@@ -12,9 +14,14 @@ const paths: Routes = [
 ];
 
 @NgModule({
-  declarations: [PersonalComponent, OfficialComponent, EmployeeListComponent],
+  declarations: [
+    PersonalComponent,
+    OfficialComponent,
+    EmployeeListComponent
+  ],
   imports: [
     CommonModule,
+    FormsModule,
     RouterModule.forChild(paths)
 
   ],
